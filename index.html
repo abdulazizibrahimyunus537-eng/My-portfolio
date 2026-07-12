@@ -334,21 +334,45 @@ our vission: To become one of the leading tailoring brands</p>
     
     <p>Q: do you accept costumer designs</p>
     <p>A: yes, we also do</p>
-</div
-  <div style="max-width:320px;margin:15px auto;text-align:center;">
-<h3>BINBAZ Customer Login</h3>
-<input id="n" placeholder="Name" style="width:95%;padding:8px;margin:5px;">
-<input id="p" placeholder="WhatsApp No" style="width:95%;padding:8px;margin:5px;">
-<input id="pw" type="password" placeholder="Password" style="width:95%;padding:8px;margin:5px;">
-<button onclick="wa()" style="width:100%;padding:10px;background:#25D366;color:#fff;border:none;margin:5px 0;">WhatsApp</button>
+           </d>  
+          <div style="max-width: 340px; margin: 15px auto; padding: 0 15px;">
+  <h3 style="text-align: center; color: #0a4da2; margin-bottom: 15px;">
+    BINBAZ Customer Login
+  </h3>
+  
+  <form>
+    <input type="text" placeholder="Name" 
+           style="width: 100%; padding: 12px; margin: 6px 0; 
+                  border: 1px solid #ccc; border-radius: 6px; 
+                  box-sizing: border-box; font-size: 16px;">
+    
+    <input type="tel" placeholder="Phone" 
+           style="width: 100%; padding: 12px; margin: 6px 0; 
+                  border: 1px solid #ccc; border-radius: 6px; 
+                  box-sizing: border-box; font-size: 16px;">
+    
+    <input type="password" placeholder="Password" 
+           style="width: 100%; padding: 12px; margin: 6px 0; 
+                  border: 1px solid #ccc; border-radius: 6px; 
+                  box-sizing: border-box; font-size: 16px;">
+    
+    <button type="button" onclick="loginWA()" 
+            style="width: 100%; padding: 14px; background: #25D366; 
+                   color: white; border: none; border-radius: 6px; 
+                   margin-top: 10px; font-size: 16px; font-weight: bold;">
+      Login via WhatsApp
+    </button>
+  </form>
 </div>
+
 <script>
-function wa(){
-let n=document.getElementById('n').value;
-let p=document.getElementById('p').value;
-window.open(`https://wa.me/234XXXXXXXXXX?text=Hi, I'm ${n}. My number: ${p}`);
+function loginWA(){
+  let name = document.querySelector('input[placeholder="Name"]').value;
+  let phone = document.querySelector('input[placeholder="Phone"]').value;
+  let msg = `Hello BINBAZ%0AName: ${name}%0APhone: ${phone}%0AI want to login`;
+  window.open(`https://wa.me/234XXXXXXXXXX?text=${msg}`, '_blank');
 }
-</script>    
+</script>     
 
 <footer>
 <p>&copy; 2026 BINBAZ TAILORING SERVICE. All Rights Reserved.</p>
