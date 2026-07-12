@@ -88,6 +88,57 @@ footer {
     margin-top: 40px;
 }
 
+.login-card {
+  text-align: center;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-title {
+  color: #0a4da2;
+  margin-bottom: 15px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #0a4da2;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #1ebe5a;
+}
+
 </style>
 
 </head>
@@ -336,38 +387,32 @@ our vission: To become one of the leading tailoring brands</p>
     <p>A: yes, we also do</p>
            </div>  
        </nav>
-        <nav class="page" id="login">
-<div id="login" style="text-align: center; background: #fff; padding: 25px; 
-           border-radius: 8px; margin: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-  
-  <h3 style="color: #0a4da2; margin-bottom: 15px;">
-    BINBAZ Customer Login
-  </h3>
-  
-  <form style="max-width: 400px; margin: 0 auto;">
-    <input type="text" placeholder="Name" 
-           style="width: 100%; padding: 12px; margin: 6px 0; 
-                  border: 1px solid #ccc; border-radius: 6px; 
-                  box-sizing: border-box; font-size: 16px;">
+      <nav class="page" id="login">
+  <div class="login-card">
     
-    <input type="tel" placeholder="Phone" 
-           style="width: 100%; padding: 12px; margin: 6px 0; 
-                  border: 1px solid #ccc; border-radius: 6px; 
-                  box-sizing: border-box; font-size: 16px;">
+    <h3 class="login-title">BINBAZ Customer Login</h3>
     
-    <input type="password" placeholder="Password" 
-           style="width: 100%; padding: 12px; margin: 6px 0; 
-                  border: 1px solid #ccc; border-radius: 6px; 
-                  box-sizing: border-box; font-size: 16px;">
+    <form class="login-form">
+      <input type="text" placeholder="Name" class="login-input">
+      <input type="tel" placeholder="Phone" class="login-input">
+      <input type="password" placeholder="Password" class="login-input">
+      
+      <button type="button" onclick="loginWA()" class="login-btn">
+        Login via WhatsApp
+      </button>
+    </form>
     
-    <button type="button" onclick="loginWA()" 
-            style="width: 100%; padding: 14px; background: #25D366; 
-                   color: white; border: none; border-radius: 6px; 
-                   margin-top: 10px; font-size: 16px; font-weight: bold;">
-      Login via WhatsApp
-    </button>
-  </form>
-</div>
+  </div>
+</nav>
+
+<script>
+function loginWA(){
+  let name = document.querySelector('.login-form input[placeholder="Name"]').value;
+  let phone = document.querySelector('.login-form input[placeholder="Phone"]').value;
+  let msg = `Hello BINBAZ%0AName: ${name}%0APhone: ${phone}%0AI want to login`;
+  window.open(`https://wa.me/234XXXXXXXXXX?text=${msg}`, '_blank');
+}
+</script>  
     </nav>     
 
 <footer>
