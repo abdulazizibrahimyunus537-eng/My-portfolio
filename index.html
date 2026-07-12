@@ -336,26 +336,29 @@ our vission: To become one of the leading tailoring brands</p>
     <p>A: yes, we also do</p>
            </div>  
        </nav>
-          <div style="max-width: 340px; margin: 15px auto; padding: 0 15px;">
-  <h3 style="text-align: center; color: #0a4da2; margin-bottom: 15px;">
+        <nav class="page" id="login">
+<div id="login" style="text-align: center; background: #fff; padding: 25px; 
+           border-radius: 8px; margin: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+  
+  <h3 style="color: #0a4da2; margin-bottom: 15px;">
     BINBAZ Customer Login
   </h3>
-  <nav class="page" id="login">
-  <form>
+  
+  <form style="max-width: 400px; margin: 0 auto;">
     <input type="text" placeholder="Name" 
            style="width: 100%; padding: 12px; margin: 6px 0; 
                   border: 1px solid #ccc; border-radius: 6px; 
-                  box-sizing: border-box; font-size: 20px;">
+                  box-sizing: border-box; font-size: 16px;">
     
     <input type="tel" placeholder="Phone" 
            style="width: 100%; padding: 12px; margin: 6px 0; 
                   border: 1px solid #ccc; border-radius: 6px; 
-                  box-sizing: border-box; font-size: 20px;">
+                  box-sizing: border-box; font-size: 16px;">
     
     <input type="password" placeholder="Password" 
            style="width: 100%; padding: 12px; margin: 6px 0; 
                   border: 1px solid #ccc; border-radius: 6px; 
-                  box-sizing: border-box; font-size: 20px;">
+                  box-sizing: border-box; font-size: 16px;">
     
     <button type="button" onclick="loginWA()" 
             style="width: 100%; padding: 14px; background: #25D366; 
@@ -365,16 +368,7 @@ our vission: To become one of the leading tailoring brands</p>
     </button>
   </form>
 </div>
-
-<script>
-function loginWA(){
-  let name = document.querySelector('input[placeholder="Name"]').value;
-  let phone = document.querySelector('input[placeholder="Phone"]').value;
-  let msg = `Hello BINBAZ%0AName: ${name}%0APhone: ${phone}%0AI want to login`;
-  window.open(`https://wa.me/234XXXXXXXXXX?text=${msg}`, '_blank');
-}
-</script>  
-           </nav>             
+    </nav>     
 
 <footer>
 <p>&copy; 2026 BINBAZ TAILORING SERVICE. All Rights Reserved.</p>
