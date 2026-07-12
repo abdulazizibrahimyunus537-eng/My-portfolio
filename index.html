@@ -335,72 +335,20 @@ our vission: To become one of the leading tailoring brands</p>
     <p>Q: do you accept costumer designs</p>
     <p>A: yes, we also do</p>
 </div
-      
-<div style="max-width: 400px; margin: 30px auto; padding: 25px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); background: #fff;">
-    <div style="text-align: center;">
-        <h2 style="color: #0a4da2; margin-bottom: 5px;">BINBAZ TAILORING</h2>
-        <h4 style="margin-top: 0; color: #555;">Customer Account</h4>
-        
-        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <p style="margin: 0 0 10px 0;"><b>Create an account to:</b></p>
-            <ul style="display: inline-block; text-align: left; margin: 0; padding-left: 20px;">
-                <li>Track your orders</li>
-                <li>Book appointments faster</li>
-                <li>Get exclusive discounts</li>
-            </ul>
-        </div>
-        
-        <form id="authForm">
-            <input type="text" id="username" placeholder="Full Name" required 
-                   style="width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
-            
-            <input type="email" id="email" placeholder="Email Address" required 
-                   style="width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
-            
-            <input type="tel" id="phone" placeholder="WhatsApp Number: 08012345678" required 
-                   style="width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
-            
-            <input type="password" id="password" placeholder="Create Password" required 
-                   style="width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
-            
-            <button type="button" onclick="signUpUser()" 
-                    style="width: 100%; padding: 14px; background-color: #0a4da2; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 15px; font-weight: bold;">
-                Create Account
-            </button>
-            
-            <button type="button" onclick="loginUser()" 
-                    style="width: 100%; padding: 14px; background-color: #fff; color: #0a4da2; border: 2px solid #0a4da2; border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 10px; font-weight: bold;">
-                Login Instead
-            </button>
-            
-            <div style="margin: 20px 0; text-align: center; color: #888;">OR</div>
-            
-            <button type="button" onclick="whatsappSignUp()" 
-                    style="width: 100%; padding: 14px; background-color: #25D366; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; font-weight: bold;">
-                Sign Up via WhatsApp
-            </button>
-            
-            <p id="authMessage" style="margin-top: 15px; font-weight: bold; min-height: 20px;"></p>
-        </form>
-    </div>
+  <div style="max-width:320px;margin:15px auto;text-align:center;">
+<h3>BINBAZ Customer Login</h3>
+<input id="n" placeholder="Name" style="width:95%;padding:8px;margin:5px;">
+<input id="p" placeholder="WhatsApp No" style="width:95%;padding:8px;margin:5px;">
+<input id="pw" type="password" placeholder="Password" style="width:95%;padding:8px;margin:5px;">
+<button onclick="wa()" style="width:100%;padding:10px;background:#25D366;color:#fff;border:none;margin:5px 0;">WhatsApp</button>
 </div>
-
 <script>
-function signUpUser() {
-    let name = document.getElementById('username').value;
-    let email = document.getElementById('email').value;
-    let phone = document.getElementById('phone').value;
-    let password = document.getElementById('password').value;
-    let msg = document.getElementById('authMessage');
-    
-    if(name && email && phone && password) {
-        localStorage.setItem('binbaz_user', name);
-        localStorage.setItem('binbaz_email', email);
-        localStorage.setItem('binbaz_phone', phone);
-        
-        msg.style.color = 'green';
-        msg.innerHTML = "✅ Account created! Welcome " + name + "<br>You can now book appointments.";
-        
+function wa(){
+let n=document.getElementById('n').value;
+let p=document.getElementById('p').value;
+window.open(`https://wa.me/234XXXXXXXXXX?text=Hi, I'm ${n}. My number: ${p}`);
+}
+</script>    
 
 <footer>
 <p>&copy; 2026 BINBAZ TAILORING SERVICE. All Rights Reserved.</p>
